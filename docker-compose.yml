@@ -7,14 +7,14 @@ services:
     stdin_open: true
     ports:
       - "8546:8546"
-  # postgres:
-  #   build: ./postgres
-  #   container_name: postgres
-  #   tty: true
-  #   stdin_open: true
-  #   environment:
-  #     POSTGRES_PASSWORD: chainlink
-  #     POSTGRES_USER: chainlink
-  #     POSTGRES_DB: chainlink
-  #   ports:
-  #     - "5432:5432"
+  postgres:
+    build: ./postgres
+    container_name: postgres
+    tty: true
+    stdin_open: true
+    environment:
+      POSTGRES_PASSWORD: chainlink
+      POSTGRES_USER: chainlink
+      POSTGRES_DB: chainlink
+    ports:
+      - "5432:5432"
