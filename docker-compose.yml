@@ -18,3 +18,14 @@ services:
       POSTGRES_DB: chainlink
     ports:
       - "5432:5432"
+  chainlink:
+    build: ./chainlink
+    container_name: chainlink
+    tty: true
+    stdin_open: true
+    env_file:
+      - chainlink/.env
+    volumes:
+      - ./chainlink:/chainlink
+    ports:
+      - "6688:6688"
